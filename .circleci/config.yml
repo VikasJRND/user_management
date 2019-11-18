@@ -2,7 +2,8 @@ version: 2.1
 
 jobs:
   prepare:
-    <<: *defaults
+    docker:
+       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: npm install
