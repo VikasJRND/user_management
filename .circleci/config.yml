@@ -6,7 +6,12 @@ orbs:
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
-  welcome:
+  buildstep:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
+      build:
+        windows:
+        steps:
+          - checkout
+          - run 'npm install'
+          - run 'npm build'
