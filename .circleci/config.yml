@@ -11,7 +11,7 @@ workflows:
     jobs:
       build:
         windows:
+          - image: circleci/ruby:2.4.1
         steps:
           - checkout
-          - run 'npm install'
-          - run 'npm build'
+          - run: echo " hi"
